@@ -8,5 +8,7 @@ def insertSort(lst):
         lst[j+1] = key
 
 lst = [92,54,12,54,3,67,18,33,1032,12321,89323,5,3,5,2,1]
-insertSort(lst)
-print(lst)
+
+if __name__ == '__main__':
+    import timeit
+    print(timeit.timeit('insertSort(lst)', setup='from __main__ import insertSort', globals=globals(),number=100))
